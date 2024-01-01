@@ -15,7 +15,6 @@ window.onload = () => {
 
 const renderTodo = () =>{
     todos = JSON.parse(localStorage.getItem("todos")) || [];
-    console.log("todos",todos)
     if(todos.length>0){
         for(const todo of todos){
             createTodoElemenet(todo)
@@ -76,7 +75,6 @@ const addTodo = (taskName) => {
 }
 
 const createTodoElemenet = (newTask) => {
-    console.log("creating element with id",newTask.id)
     const todoElement = document.createElement('div');
     todoElement.classList.add("todo");
 
