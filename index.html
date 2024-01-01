@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1 align="center">Todo-App</h1>
+    <form >
+      <p class=" error error-hidden">Please enter the task name</p>
+      <div class="formfield">
+        <input required class="taskname" type="text" value="" name="taskname" id="Todo" placeholder="Buy groceries, walking,...">
+        <button type="submit" class="addbtn" >Add</button>
+      </div>
+    </form>
+    <section class="todolist" >
+  
+      <div class="empty-todo">
+        <img src="/empty-todo.svg" alt="empty todo">
+        <p>Empty Todo</p>
+      </div>
+
+    </section>
+
+    <script src="app.js"></script>
+  </body>
+</html>

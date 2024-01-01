@@ -1,0 +1,182 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    font-size: 16px;
+}
+
+form {
+    width: 80vw;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 30px;
+    margin: auto;
+    height: auto;
+    margin-top: 5rem;
+
+}
+
+input[type="text"] {
+    padding: 10px 15px;
+}
+
+.addbtn {
+    padding: 5px 8px;
+    width: 60px;
+    border-radius: 12px;
+    border: none;
+    background: rgb(94, 94, 213);
+    color: #f1f1f1;
+    font-size: large;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.formfield {
+    display: flex;
+    gap: 30px;
+}
+
+.error {
+    transition: all 300ms ease-in;
+}
+
+.error-visible {
+    display: block;
+    opacity: 100;
+    color: red;
+    font-size: 14px;
+    transition: all 300ms ease-in;
+
+
+}
+
+.error-hidden {
+    display: none;
+    opacity: 0;
+    transition: all 300ms ease-in;
+
+
+}
+
+.todolist {
+    min-width: 25vw;
+    max-width: 60vw;
+    height: 60vh;
+    border: black 4px solid;
+    box-shadow: 2px 2px 0 1px;
+    border-radius: 24px;
+    margin: auto;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    padding-top: 30px;
+    overflow-y: auto;
+   
+
+
+
+}
+@keyframes fadeup{
+    from{
+        opacity: 0;
+        transform: translateY(100%);
+    }
+    to{
+        opacity: 100%;
+        transform: translateY(0);
+    }
+}
+
+.todo {
+    display: flex;
+    gap: 30px;
+    width: 80%;
+    padding: 10px 20px;
+    border-radius: 20px;
+    border: 1px solid #bbb8b880;
+    animation: fadeup ease-in 300ms forwards;
+
+}
+
+.todo:hover {
+    background-color: #bbb8b840;
+    border: 1px solid #bbb8b840;
+
+}
+
+.todo.checked {
+    background-color: #bbb8b840;
+    border: 1px solid #bbb8b840;
+
+}
+
+.deletebtn {
+    margin-left: auto;
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+.empty-todo {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.empty-todo img {
+    max-width: 300px;
+    display: block;
+}
+
+.hide-empty-todo {
+    display: none;
+}
+
+@media (width<=620px) {
+    .empty-todo img {
+        display: none;
+    }
+}
+
+
+@media (width>620px) {
+    .empty-todo {
+        >p {
+
+            display: none;
+        }
+    }
+}
+
+
+/* Works on Firefox */
+* {
+    scrollbar-width: 5px;
+    scrollbar-color: #5F63D5;
+  }
+  
+  /* Works on Chrome, Edge, and Safari */
+  *::-webkit-scrollbar {
+    width: 5px;
+  }
+  
+ 
+  
+  *::-webkit-scrollbar-thumb {
+    background-color: #5F63D5;
+    border-radius: 100px;
+  }
